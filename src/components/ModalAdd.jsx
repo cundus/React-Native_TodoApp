@@ -69,6 +69,7 @@ export default function ModalAdd({ visible, setVisible, url, fetchTodos }) {
             <Input
               placeholder="Input your Title"
               value={title}
+              autoFocus={true}
               onChangeText={(nextValue) => setTitle(nextValue)}
             />
 
@@ -84,7 +85,7 @@ export default function ModalAdd({ visible, setVisible, url, fetchTodos }) {
           <Layout style={styles.btnContainer}>
             <Button
               accessoryLeft={CancelIcon}
-              appearance="filled"
+              appearance="outline"
               status="danger"
               onPress={() => setVisible(false)}
             >
@@ -94,7 +95,7 @@ export default function ModalAdd({ visible, setVisible, url, fetchTodos }) {
               onPress={handleSubmit}
               accessoryLeft={CheckIcon}
               t
-              appearance="filled"
+              appearance="outline"
               status="success"
             >
               Add

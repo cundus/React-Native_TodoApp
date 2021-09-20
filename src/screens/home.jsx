@@ -11,6 +11,7 @@ import axios from "axios";
 
 import ModalAdd from "../components/ModalAdd";
 import ContentTodos from "../components/ContentTodos";
+import { useIsFocused } from "@react-navigation/native";
 
 const PlusIcon = (props) => <Icon {...props} name="plus" />;
 
@@ -20,6 +21,7 @@ export const HomeScreen = ({ navigation }) => {
   const [todos, setTodos] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
   const [inputValue, setInputValue] = React.useState("");
+  const isFocused = useIsFocused();
 
   const url = "http://192.168.42.12:4000/api/v1";
 
@@ -38,7 +40,7 @@ export const HomeScreen = ({ navigation }) => {
 
   React.useEffect(() => {
     fetchTodos();
-  }, []);
+  }, [isFocused]);
 
   return (
     <Layout style={{ flex: 1 }}>

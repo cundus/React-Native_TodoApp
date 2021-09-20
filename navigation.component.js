@@ -6,7 +6,7 @@ import { TabBar, Tab, Layout, Text, Icon } from "@ui-kitten/components";
 
 import { HomeScreen } from "./src/screens/home";
 import { DetailsScreen } from "./src/screens/details";
-import Undone from "./src/screens/undone";
+import { Undone } from "./src/screens/undone";
 
 const Stack = createStackNavigator();
 
