@@ -6,6 +6,7 @@ import { TabBar, Tab, Layout, Text, Icon } from "@ui-kitten/components";
 
 import { HomeScreen } from "./src/screens/home";
 import { DetailsScreen } from "./src/screens/details";
+import Undone from "./src/screens/undone";
 
 const Stack = createStackNavigator();
 
@@ -34,7 +35,7 @@ const TabNavigator = () => (
     }}
   >
     <TopTab.Screen name="Todo" component={HomeScreen} />
-    <TopTab.Screen name="Done" component={DetailsScreen} />
+    <TopTab.Screen name="Undone" component={Undone} />
   </TopTab.Navigator>
 );
 
@@ -52,7 +53,7 @@ const HomeNavigator = () => (
         },
       }}
     />
-    {/* <Stack.Screen name="Details" component={DetailsScreen} /> */}
+    <Stack.Screen name="Details" component={DetailsScreen} />
   </Stack.Navigator>
 );
 

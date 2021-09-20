@@ -9,9 +9,9 @@ import {
   TopNavigationAction,
 } from "@ui-kitten/components";
 
-const BackIcon = (props) => <Icon {...props} name="arrow-back" />;
+export const DetailsScreen = (props) => {
+  console.log(props);
 
-export const DetailsScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Layout

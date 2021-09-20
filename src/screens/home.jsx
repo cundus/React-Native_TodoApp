@@ -15,10 +15,7 @@ import ContentTodos from "../components/ContentTodos";
 const PlusIcon = (props) => <Icon {...props} name="plus" />;
 
 export const HomeScreen = ({ navigation }) => {
-  const navigateDetails = () => {
-    navigation.navigate("Details");
-  };
-
+  // console.log(navigation);
   const [visible, setVisible] = React.useState(false);
   const [todos, setTodos] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
@@ -56,6 +53,7 @@ export const HomeScreen = ({ navigation }) => {
           fetchTodos={fetchTodos}
           todos={todos}
           isLoading={isLoading}
+          navigation={navigation.navigate}
         />
       </Layout>
 
